@@ -1,15 +1,29 @@
-import Link from "next/link";
 import React from "react";
+import classes from "./page.module.css";
+import Link from "next/link";
+import {MealsGrid} from "@/app/components/meals/MealsGrid";
 
 const MealsPage = () => {
     return(
-        <main>
-            <h1>Meals</h1>
-            <p><Link href='/meals/burger'>Burger</Link></p>
-            <p><Link href='/meals/pasta'>Pasta</Link></p>
-            <p><Link href='/meals/khinkali'>Khinkali</Link></p>
-            <p><Link href='/meals/share'>Share</Link></p>
-        </main>
+        <>
+            <header className={classes.header}>
+                <h1>
+                    Delicious meals created
+                    <span className={classes.highlight}>by you</span>
+                </h1>
+                <p>
+                    Choose your favorite recipe and cook yourself. It is easy and fun.
+                </p>
+                <p className={classes.cta}>
+                    <Link href='/meals/share'>
+                        Share your favorite recipe
+                    </Link>
+                </p>
+            </header>
+            <main className={''}>
+                <MealsGrid meals={[]}/>
+            </main>
+        </>
     )
 }
 

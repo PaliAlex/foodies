@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import classes from './main-header.module.css'
 import {MainHeaderBackground} from "./MainHeaderBackground";
+import {NavLink} from "@/app/components/main-header/nav-link/NavLink";
 
 export const MainHeader = () => (
     <>
@@ -17,8 +18,8 @@ export const MainHeader = () => (
                 Nextlevel food
             </Link>
             <nav className={classes.nav}>
-                <Link href="/meals">Browse meals</Link>
-                <Link href="/community">Community</Link>
+                <NavLink href="/meals">Browse meals</NavLink>
+                <NavLink href="/community">Community</NavLink>
             </nav>
         </header>
     </>
