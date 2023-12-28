@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "better-sqlite3": "^9.2.2",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
@@ -18,9 +19,9 @@
     "@types/node": "^18.18.3",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
-    "typescript": "^5.2.2",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "14.0.4",
+    "typescript": "^5.2.2"
   },
   "resolutions": {
     "styled-components": "^6"
