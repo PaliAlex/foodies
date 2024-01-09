@@ -13,7 +13,9 @@
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "save-dev": "^0.0.1-security"
+    "save-dev": "^0.0.1-security",
+    "slugify": "^1.6.6",
+    "xss": "^1.0.14"
   },
   "devDependencies": {
     "@types/node": "^18.18.3",
