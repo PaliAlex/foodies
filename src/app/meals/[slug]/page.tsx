@@ -1,4 +1,6 @@
 import React from "react";
+import { notFound } from "next/navigation";
+
 import classes from "./page.module.css";
 import Image from "next/image";
 import {getMeal} from "@/lib/meals";
@@ -9,6 +11,10 @@ type IMealItemPageProps = {
 
 const MealItemPage: React.FC<IMealItemPageProps> = ({params}) => {
     const meal = getMeal(params.slug);
+
+    if(!meal) {
+        notFound();
+    }
 
     meal.instructions = meal.instructions.replace(/\n/g, '<br />');
 
