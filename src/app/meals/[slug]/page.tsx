@@ -6,7 +6,24 @@ import Image from "next/image";
 import {getMeal} from "@/lib/meals";
 
 type IMealItemPageProps = {
-    params: { slug: string };
+    params: IParams;
+}
+
+interface IParams {
+    slug: string;
+}
+
+export async function generateMetadata(args: IMealItemPageProps){
+    const meal = getMeal(args.params.slug);
+
+    if(!meal) {
+        notFound();
+    }
+
+    return {
+        title: meal.title,
+        description: meal.summary,
+    }
 }
 
 const MealItemPage: React.FC<IMealItemPageProps> = ({params}) => {
